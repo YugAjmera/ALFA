@@ -1,6 +1,6 @@
-# Solar-AV
+# ALFA
 
-## Autonomous vehicle for solar panel inspection
+## APTRI Labs Floor Assistant
 
 ### An internship project done at Adani Power
 
