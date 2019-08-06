@@ -39,10 +39,15 @@ The mounts were fixed to the base plates using screws.
 
 ### Connections
 IN1 - GPIO Pin 5
+
 IN2 - GPIO Pin 6
+
 IN3 - GPIO Pin 13
+
 IN4 - GPIO Pin 19
+
 ENA - GPIO Pin 20
+
 ENB - GPIO Pin 21
 
 ### Installation
@@ -62,10 +67,15 @@ sudo lighttpd-enable-mod cgi
 sudo lighttpd-enable-mod fastcgi
 ```
 `sudo nano /etc/lighttpd/lighttpd.conf`
+
 change:
+
 server.document-root =“/var/www/html”
+
 by:
+
 server.document-root =“/var/www”
+
 
 4. Installing raspicam library to view live camera feed on the web page.
 ```
@@ -84,7 +94,7 @@ sudo rm -rf ~/mjpg-streamer
 sudo mkdir /var/www
 ```
 
-6. 
+6. Add these commands to this file so that whenever raspi reboots all these commands are executed.
 ```
 sudo nano /etc/rc.local
 ```
@@ -98,8 +108,10 @@ gpio -g mode 13 out
 gpio -g mode 19 out
 LD_LIBRARY_PATH=/opt/mjpg-streamer/ /opt/mjpg-streamer/mjpg_streamer -i "input_raspicam.so -fps 15 -q 50 -x 640 -y 480" -o "output_http.so -p 9000 -w /opt/mjpg-streamer/www" &
 ```
+We are setting all these pins to OUTPUT and adding this last line to stream the live video feed on the webpage.
 
-7. Restart the server after some changes.
+
+7. Restart the server after the changes.
 ```
 sudo /etc/init.d/lighttpd stop
 sudo /etc/init.d/lighttpd start
@@ -110,6 +122,8 @@ sudo /etc/init.d/lighttpd start
 hostname -I
 ```
 This will give you a IP address. You can access the web page using any wifi-enalbed device by entering this IP address. Using this, you can control the robot and also view the live video feed !
+
+Find the Report of the project [here](/PS-1%20Report.pdf).
 
 ![](images/final.gif)
 
