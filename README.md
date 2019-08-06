@@ -62,13 +62,9 @@ sudo lighttpd-enable-mod cgi
 sudo lighttpd-enable-mod fastcgi
 ```
 `sudo nano /etc/lighttpd/lighttpd.conf`
-
 change:
-
 server.document-root =“/var/www/html”
-
 by:
-
 server.document-root =“/var/www”
 
 4. Installing raspicam library to view live camera feed on the web page.
@@ -83,11 +79,10 @@ sudo mv ~/mjpg-streamer/mjpg-streamer-experimental /opt/mjpg-streamer
 sudo rm -rf ~/mjpg-streamer
 ```
 
-5. 
+5. Copy the contents of the **code** folder and paste it in the /var/www folder.
 ```
 sudo mkdir /var/www
 ```
-Copy the contents of the **code** folder and paste it in the /var/www folder.
 
 6. 
 ```
