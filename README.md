@@ -20,8 +20,8 @@ We started by designing a basic chassis on Solidworks 2017. Once the chassis des
 3. Support Rods
 4. Motor Mounts
 
-We used wooden based plates to aid in mounting the other components whereas the support rods mounts, support rods and motor mounts were all 3D Printed. The CAD files are available ![here](\CAD files)
-![](imgaes/printer.gif)
+We used wooden based plates to aid in mounting the other components whereas the support rods mounts, support rods and motor mounts were all 3D Printed. The CAD files are available[here](/CAD%20files)
+![](images/printer.gif)
 
 
 
