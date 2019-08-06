@@ -10,7 +10,7 @@ Creators : [Yug Ajmera](https://github.com/YugAjmera), [Maulik Ravani](https://g
 - Power bank 10000 mAh (to power raspi)
 - 4 x Motors (we have used 300RPM)
 - L298N
-- Lipo battery 4200 mAh
+- Lipo battery 4200 mAh (to power L298N)
 - Jumper Wires
 - Breadboard
 
@@ -38,6 +38,9 @@ The mounts were fixed to the base plates using screws.
 ![](images/assembly.jpg)
 
 ### Connections
+
+L298N:
+
 IN1 - GPIO Pin 5
 
 IN2 - GPIO Pin 6
@@ -49,6 +52,8 @@ IN4 - GPIO Pin 19
 ENA - GPIO Pin 20
 
 ENB - GPIO Pin 21
+
+Note: Make a commond ground for L298N and Raspberry Pi. 
 
 ### Installation
 1. Flash the Raspbian OS into your Raspberry Pi.
