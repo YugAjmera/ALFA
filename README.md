@@ -55,6 +55,9 @@ ENB - GPIO Pin 21
 
 Note: Make a commond ground for L298N and Raspberry Pi. 
 
+![](images/open.jpg)
+
+
 ### Installation
 1. Flash the Raspbian OS into your Raspberry Pi.
 
