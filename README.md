@@ -38,7 +38,12 @@ The mounts were fixed to the base plates using screws.
 ![](images/assembly.jpg)
 
 ### Connections
-IN1 - 
+IN1 - GPIO Pin 5
+IN2 - GPIO Pin 6
+IN3 - GPIO Pin 13
+IN4 - GPIO Pin 19
+ENA - GPIO Pin 20
+ENB - GPIO Pin 21
 
 ### Installation
 1. Load the Raspbian OS into your Raspberry Pi.
@@ -53,9 +58,7 @@ cd wiringPi
 3. Installing Lighttpd server for hosting the webpage.
 ```
 sudo apt-get -y install lighttpd
-
 sudo lighttpd-enable-mod cgi
-
 sudo lighttpd-enable-mod fastcgi
 ```
 `sudo nano /etc/lighttpd/lighttpd.conf`
@@ -68,7 +71,7 @@ by:
 
 server.document-root =“/var/www”
 
-4. Installing raspicam library.
+4. Installing raspicam library to view live camera feed on the web page.
 ```
 sudo apt-get install libjpeg62-turbo-dev 
 sudo apt-get install cmake
@@ -80,44 +83,38 @@ sudo mv ~/mjpg-streamer/mjpg-streamer-experimental /opt/mjpg-streamer
 sudo rm -rf ~/mjpg-streamer
 ```
 
-4. 
+5. 
 ```
 sudo mkdir /var/www
 ```
 Copy the contents of the **code** folder and paste it in the /var/www folder.
 
-5. 
+6. 
 ```
 sudo nano /etc/rc.local
 ```
 Copy and paste the following just before "exit 0" line.
 ```
 gpio -g mode 20 out
-
 gpio -g mode 21 out
-
 gpio -g mode 5 out
-
 gpio -g mode 6 out
-
 gpio -g mode 13 out
-
 gpio -g mode 19 out
-
 LD_LIBRARY_PATH=/opt/mjpg-streamer/ /opt/mjpg-streamer/mjpg_streamer -i "input_raspicam.so -fps 15 -q 50 -x 640 -y 480" -o "output_http.so -p 9000 -w /opt/mjpg-streamer/www" &
 ```
 
-6. Restart the server after some changes.
+7. Restart the server after some changes.
 ```
 sudo /etc/init.d/lighttpd stop
 sudo /etc/init.d/lighttpd start
 ```
 
-7. 
+8. 
 ```
 hostname -I
 ```
 This will give you a IP address. You can access the web page using any wifi-enalbed device by entering this IP address. Using this, you can control the robot and also view the live video feed !
 
-
+![](images/final.gif)
 
