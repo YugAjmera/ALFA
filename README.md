@@ -1,6 +1,6 @@
 # ALFA : APTRI Labs Floor Assistant
 
-### An internship project done at Adani Power
+## An internship project done at Adani Power
 
 ### Things required
 ![](images/req.jpg)
@@ -17,10 +17,13 @@
 We started by designing a basic chassis on Solidworks 2017. Once the chassis design was finalised, we used the software ANSYS Student 19.2 to do structural analysis of the robot. This analysis helped us in identifying the major stress points and optimizing them by making necessary changes to the robot. The major components of the chassis were identified as follows:
 1. Base plates
 2. Support Rod Mounts
+![](images/1.png)
 3. Support Rods
+![](images/2.jpg)
 4. Motor Mounts
+![](images/3.jpg)
 
-We used wooden based plates to aid in mounting the other components whereas the support rods mounts, support rods and motor mounts were all 3D Printed. The CAD files are available[here](/CAD%20files)
+We used wooden based plates to aid in mounting the other components whereas the support rods mounts, support rods and motor mounts were all 3D Printed. The CAD files are available [here](/CAD%20files)
 ![](images/printer.gif)
 
 
