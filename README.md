@@ -51,7 +51,7 @@ ENA - GPIO Pin 20
 ENB - GPIO Pin 21
 
 ### Installation
-1. Load the Raspbian OS into your Raspberry Pi.
+1. Flash the Raspbian OS into your Raspberry Pi.
 
 2. Installing WiringPi library. WiringPi is a GPIO access library written in C for the Raspberry Pi.
 ```
@@ -110,6 +110,14 @@ LD_LIBRARY_PATH=/opt/mjpg-streamer/ /opt/mjpg-streamer/mjpg_streamer -i "input_r
 ```
 We are setting all these pins to OUTPUT and adding this last line to stream the live video feed on the webpage.
 
+```
+cd /var/www/cgi-bin
+./forward.cgi
+./stop.cgi
+cd
+```
+You can add these additional lines so that whenever Raspberry Pi reboots, the robot jerks forward and this indicates that the robot is ready to be used !
+
 
 7. Restart the server after the changes.
 ```
@@ -117,11 +125,11 @@ sudo /etc/init.d/lighttpd stop
 sudo /etc/init.d/lighttpd start
 ```
 
-8. 
+8. Connect the Raspberry Pi to a Wifi network.
 ```
 hostname -I
 ```
-This will give you a IP address. You can access the web page using any wifi-enalbed device by entering this IP address. Using this, you can control the robot and also view the live video feed !
+This will give you a IP address. You can now access the web page using any wifi-enalbed device by entering this IP address. 
 
 Find the Report of the project [here](/PS-1%20Report.pdf).
 
