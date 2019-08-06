@@ -2,6 +2,8 @@
 
 ## An internship project done at Adani Power
 
+Creators : ![Yug Ajmera](https://github.com/YugAjmera), ![Maulik Ravani](https://github.com/Maulik1308), ![Devansh Dhrafani](https://github.com/devanshdhrafani), ![Dhairya Bohrania](https://github.com/Db1998)
+
 ### Things required
 - Raspberry Pi 3B+ (main controller)
 - Pi cam (for camera feed)
@@ -11,6 +13,7 @@
 - Lipo battery 4200 mAh
 - Jumper Wires
 - Breadboard
+
 ![](images/req.jpg)
 
 
