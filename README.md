@@ -2,7 +2,7 @@
 
 ## An internship project done at Adani Power
 
-Creators : [Yug Ajmera](https://github.com/YugAjmera),[Dhairya Bhorania](https://github.com/Db1998), [Maulik Ravani](https://github.com/Maulik1308), [Devansh Dhrafani](https://github.com/devanshdhrafani).
+Creators : [Yug Ajmera](https://github.com/YugAjmera), [Dhairya Bhorania](https://github.com/Db1998), [Maulik Ravani](https://github.com/Maulik1308), [Devansh Dhrafani](https://github.com/devanshdhrafani).
 
 ### Things required
 - Raspberry Pi 3B+ (main controller)
